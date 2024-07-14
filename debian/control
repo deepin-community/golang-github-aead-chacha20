@@ -1,15 +1,38 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-aead-chacha20
+Section: devel
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Eric Dorland <eric@debian.org>
+Build-Depends: debhelper-compat (= 12),
+               dh-golang,
+	       golang-golang-x-sys-dev,
+               golang-any
+Standards-Version: 4.5.1.0
+Homepage: https://github.com/aead/chacha20
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-aead-chacha20
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-aead-chacha20.git
+XS-Go-Import-Path: github.com/aead/chacha20
+Testsuite: autopkgtest-pkg-go
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-aead-chacha20-dev
+Architecture: all
+Multi-Arch: foreign
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: ChaCha20 and XChaCha20 stream ciphers go library
+ The ChaCha20 stream cipher ChaCha is a stream cipher family
+ created by Daniel J. Bernstein.  The most common ChaCha cipher
+ is ChaCha20 (20 rounds). ChaCha20 is standardized in RFC 7539
+ (https://tools.ietf.org/html/rfc7539).
+ .
+ This package provides implementations of three ChaCha versions: -
+ ChaCha20 with a 64 bit nonce (can en/decrypt up to 2^64 * 64 bytes
+ for one key-nonce combination) - ChaCha20 with a 96 bit nonce (can
+ en/decrypt up to 2^32 * 64 bytes ~ 256 GB for one key-nonce combination)
+ - XChaCha20 with a 192 bit nonce (can en/decrypt up to 2^64 * 64 bytes
+ for one key-nonce combination)
+ .
+ Furthermore the chacha subpackage implements ChaCha20/12 and ChaCha20/8.
+ These versions use 12 or 8 rounds instead of 20.  But it's recommended
+ to use ChaCha20 (with 20 rounds) - it will be fast enough for
+ almost all purposes.
