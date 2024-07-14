@@ -1,5 +1,42 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-aead-chacha20 (0.0~git20180709.8b13a72-4) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Eric Dorland ]
+  * Standards-Version to 4.5.1.0
+
+ -- Eric Dorland <eric@debian.org>  Sat, 16 Jan 2021 03:42:28 -0500
+
+golang-github-aead-chacha20 (0.0~git20180709.8b13a72-3) unstable; urgency=medium
+
+  * Use git watch mode
+  * Add Multi-Arch: foreign
+
+ -- Eric Dorland <eric@debian.org>  Mon, 06 Jul 2020 00:23:15 -0400
+
+golang-github-aead-chacha20 (0.0~git20180709.8b13a72-2) unstable; urgency=medium
+
+  [ Andreas Henriksson ]
+  * Fix typo/bugnumber in previous changelog entry
+
+  [ Eric Dorland ]
+  * Switch to debhelper-compat 12
+  * Standards-Version to 4.4.0.1
+
+ -- Eric Dorland <eric@debian.org>  Sun, 28 Jul 2019 17:37:10 -0400
+
+golang-github-aead-chacha20 (0.0~git20180709.8b13a72-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.0~git20180709.8b13a72 (Closes: #918515)
+  * Add new build-dependency golang-golang-x-sys-dev
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 10 Jan 2019 23:19:09 +0100
+
+golang-github-aead-chacha20 (0.0~git20180214.c8d2937-1) unstable; urgency=medium
+
+  * Initial release (Closes: #892705)
+
+ -- Eric Dorland <eric@debian.org>  Mon, 12 Mar 2018 00:43:45 -0400
